@@ -1,6 +1,8 @@
 import Image from "next/image";
 import SiteHeader from "./site-header";
 
+const WHATSAPP_LINK = "https://wa.me/62895363076706";
+
 const features = [
   {
     icon: "bolt",
@@ -401,14 +403,15 @@ export default function Home() {
 
               <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
                 <a
-                  href="#pricing"
+                  href={WHATSAPP_LINK}
                   className="inline-flex h-14 w-full items-center justify-center gap-4 rounded-full bg-[#ff7900] px-6 text-base font-bold text-white shadow-[0_16px_35px_rgba(255,121,0,.25)] transition hover:bg-[#f26d00] sm:w-auto sm:px-8 sm:text-lg"
                 >
                   Coba Gratis Sekarang
                   <span className="text-3xl leading-none">-&gt;</span>
                 </a>
                 <a
-                  href="#detail"
+                  href="/archana-smart-order.pdf"
+                  download
                   className="hidden h-14 items-center justify-center gap-4 rounded-full px-2 text-lg font-extrabold text-[#1d120b] lg:inline-flex"
                 >
                   <span className="flex h-12 w-12 items-center justify-center rounded-full bg-white/75 text-[#1d120b] shadow-[0_12px_30px_rgba(92,55,20,.1)]">
@@ -722,11 +725,10 @@ export default function Home() {
               </div>
 
               <a
-                href="#"
+                href={WHATSAPP_LINK}
                 className="mt-8 inline-flex h-14 w-full items-center justify-center gap-4 rounded-full bg-[#ff7900] px-6 text-base font-bold text-white shadow-[0_16px_35px_rgba(255,121,0,.25)] transition hover:bg-[#f26d00] sm:px-8 sm:text-lg"
               >
                 Mulai Konsultasi
-                <span className="text-3xl leading-none">-&gt;</span>
               </a>
             </article>
 
@@ -820,7 +822,16 @@ export default function Home() {
 
         <div className="mx-auto mt-10 flex max-w-[1500px] flex-col gap-3 border-t border-white/12 pt-6 text-sm font-semibold text-white/52 sm:flex-row sm:items-center sm:justify-between">
           <p>© 2026 Archana App. All rights reserved.</p>
-          <p>Built for hotel, villa, and hospitality operations.</p>
+          <div className="flex items-center gap-4">
+            <a
+              href="/terms"
+              className="transition hover:text-white/80"
+            >
+              Syarat &amp; Ketentuan
+            </a>
+            <span className="text-white/24">|</span>
+            <p>Built for hotel, villa, and hospitality operations.</p>
+          </div>
         </div>
       </footer>
     </main>
