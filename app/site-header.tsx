@@ -3,6 +3,8 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
+const WHATSAPP_LINK = "https://wa.me/62895363076706";
+
 function BrandMark() {
   return (
     <Image
@@ -10,7 +12,7 @@ function BrandMark() {
       alt=""
       width={48}
       height={60}
-      className="h-10 w-10 object-contain sm:h-12 sm:w-12"
+      className="h-10 w-auto object-contain sm:h-12"
       priority
     />
   );
@@ -87,7 +89,7 @@ export default function SiteHeader() {
         </nav>
 
         <a
-          href="#pricing"
+          href={WHATSAPP_LINK}
           className="hidden h-14 items-center justify-center gap-3 rounded-full bg-[#ff7900] px-7 text-base font-bold text-white shadow-[0_16px_35px_rgba(255,121,0,.25)] transition hover:-translate-y-0.5 hover:bg-[#f26d00] md:flex lg:px-8 lg:text-lg"
         >
           Coba Gratis Sekarang
@@ -141,7 +143,7 @@ export default function SiteHeader() {
           </nav>
 
           <a
-            href="#pricing"
+            href={WHATSAPP_LINK}
             className="mt-3 flex h-12 items-center justify-center gap-3 rounded-full bg-[#ff7900] px-6 text-base font-bold text-white shadow-[0_16px_35px_rgba(255,121,0,.22)]"
             onClick={() => setOpen(false)}
           >

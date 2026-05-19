@@ -355,7 +355,7 @@ function BrandMark() {
       alt=""
       width={48}
       height={60}
-      className="h-10 w-10 object-contain sm:h-12 sm:w-12"
+      className="h-10 w-auto object-contain sm:h-12"
       priority
     />
   );
